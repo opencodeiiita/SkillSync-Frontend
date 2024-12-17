@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 /* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -72,7 +70,7 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 
-}
+} */
 
 /*Signup*/
 
@@ -177,8 +175,6 @@ button:hover {
   background-color: #0099cc;
 }
 
-
-
 /* Responsive Adjustments */
 @media (max-width: 768px) {
   .register-container {
@@ -193,6 +189,3 @@ button:hover {
     padding: 30px;
   }
 }
-
-} 
-
