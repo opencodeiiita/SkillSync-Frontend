@@ -10,8 +10,8 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: #ffffff;
+  background-color: #ffffff;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -32,7 +32,7 @@ body {
   margin: 0;
   display: flex;
   place-items: center;
-  min-width: 320px;
+  min-width: 100%;
   min-height: 100vh;
 }
 
@@ -62,7 +62,7 @@ button:focus-visible {
 
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
+    color: #ffffff;
     background-color: #ffffff;
   }
   a:hover {
@@ -71,4 +71,128 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-} */
+
+}
+
+/*Signup*/
+
+/* Overall container with flex */
+.register-container {
+  display: flex;
+  width: 80%;
+  max-width: 900px;
+  margin: 50px auto;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  background: #fff;
+}
+
+/* Left Section - Image & Heading */
+.left-section {
+  width: 50%;
+  background: linear-gradient(135deg, #00ccff, #0099cc);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.left-section img {
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 20px;
+}
+
+.left-section h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Right Section - Signup Form */
+.right-section {
+  width: 50%;
+  padding: 40px 30px;
+  position: relative;
+  background: linear-gradient(150deg, #d9f4ff, #ffffff);
+}
+
+.right-section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.input-group label {
+  margin-bottom: 5px;
+  font-weight: normal;
+  color: black;
+}
+
+.input-group input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: white;
+  color: black;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #00ccff;
+  box-shadow: 0 0 5px rgba(0, 204, 255, 0.5);
+}
+
+.error {
+  color: red;
+  font-size: 0.85rem;
+  margin-top: 0px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #00ccff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0099cc;
+}
+
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .register-container {
+    flex-direction: column;
+  }
+  
+  .left-section, .right-section {
+    width: 100%;
+  }
+  
+  .left-section {
+    padding: 30px;
+  }
+}
+
+} 
+
