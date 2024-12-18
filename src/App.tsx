@@ -1,32 +1,26 @@
-
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; 
 import './App.css';
 import './index.css';
-// @ts-ignore
-import Register from './pages/Register';
-
-
-function App() {
-  return (
-    <Router>
-      {/* Define routes in App.tsx */}
-      <Routes>
-        <Route path="/register" element={<Register />} />
-        {/* You can add more routes here, like login, home, etc. */}
-      </Routes>
-    </Router>
-  );
-}
-import React from "react";
-import AppRouter from "./routes/AppRouter.tsx"; 
+// import Register from './pages/Register.tsx';
+import Home from './pages/Home.tsx'; // Import the Home component
+// import Profile from './pages/Profile.tsx'; // Add Profile Page route
+// import Settings from './pages/Settings.tsx'; // Add Settings Page route
 
 const App = () => {
   return (
-    <div className="App">
-      <AppRouter />
-    </div>
+    <Router>
+      <div className="App">
+        {/* Main routes defined here */}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          {/* <Route path="/register" element={<Register />} /> */}
+          {/* <Route path="/profile" element={<Profile />} /> */}
+          {/* <Route path="/settings" element={<Settings />} /> */}
+        </Routes>
+      </div>
+    </Router>
   );
 };
-
 
 export default App;

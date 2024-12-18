@@ -1,0 +1,10 @@
+{
+    "auth": {
+      "isLoggedIn": false,
+      "user": {
+        "name": "John Doe",
+        "profilePic": "https://via.placeholder.com/150" 
+      }
+    }
+  }
+  
