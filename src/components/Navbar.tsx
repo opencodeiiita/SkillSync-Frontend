@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { Menu, Dropdown, Avatar } from 'antd';
-import { Link } from 'react-router-dom';
+import { useState, useEffect } from "react";
+import { Menu, Dropdown, Avatar } from "antd";
+import { Link } from "react-router-dom";
 import {
   LogoutOutlined,
   SettingOutlined,
@@ -9,8 +9,10 @@ import {
   InfoCircleOutlined,
   PhoneOutlined,
   LoginOutlined,
-} from '@ant-design/icons';
-import dummy from '../dummy.json'; // Import dummy JSON
+} from "@ant-design/icons";
+import dummy from "../dummy.json"; // Import dummy JSON
+import GlobalSearchBar from "./Search";
+import NotificationBell from "./Notifications";
 
 const Navbar = () => {
   // Initialize state based on dummy JSON data for authentication
@@ -23,18 +25,18 @@ const Navbar = () => {
     // or global state (e.g., Redux or Context), but here we just use dummy data.
     setIsLoggedIn(dummy.auth.isLoggedIn);
     setUser(dummy.auth.user);
-  }, [dummy.auth.isLoggedIn, dummy.auth.user]);
+  }, []);
 
   // Handle logout logic
   const handleLogout = () => {
-    alert('Logged out');
-    window.location.href = '/login'; // Redirect to login page
+    alert("Logged out");
+    window.location.href = "/login"; // Redirect to login page
   };
 
   // Handle login logic
   const handleLogin = () => {
-    alert('Redirecting to login page');
-    window.location.href = '/login'; // Redirect to login page
+    alert("Redirecting to login page");
+    window.location.href = "/login"; // Redirect to login page
   };
 
   // Profile menu for logged-in users
@@ -93,8 +95,8 @@ const Navbar = () => {
   );
 
   return (
-    <div className="fixed top-0 left-0 w-full bg-gray-800 shadow-md z-50">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="fixed top-0 left-0 w-full bg-gray-800 shadow-md z-50 h-16">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 h-16">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link
@@ -103,6 +105,10 @@ const Navbar = () => {
           >
             SkillSync
           </Link>
+
+          <div className="w-full items-center">
+            <GlobalSearchBar />
+          </div>
 
           {/* Navigation Links - pushed to the right */}
           <div className="flex ml-auto space-x-6">
@@ -129,11 +135,13 @@ const Navbar = () => {
             </Link>
           </div>
 
+          <div className="pl-4"><NotificationBell /></div>
+
           {/* User Profile Dropdown */}
           <div className="ml-6">
             <Dropdown
               overlay={isLoggedIn ? profileMenu : guestMenu}
-              trigger={['click']}
+              trigger={["click"]}
               placement="bottomRight"
             >
               <div className="flex items-center space-x-2 cursor-pointer">
