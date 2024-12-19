@@ -159,7 +159,7 @@ button:focus-visible {
   margin-top: 0px;
 }
 
-button {
+/* button {
   width: 100%;
   padding: 10px;
   background-color: #00ccff;
@@ -173,7 +173,7 @@ button {
 
 button:hover {
   background-color: #0099cc;
-}
+} */
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
