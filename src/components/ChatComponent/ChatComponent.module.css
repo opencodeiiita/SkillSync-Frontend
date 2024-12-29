@@ -1,0 +1,260 @@
+/* Container */
+.chatContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 50%;
+  height: 600px; /* Max height */
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+  overflow: hidden;
+}
+
+/* Header */
+.chatHeader {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  background-color: #fff;
+}
+
+.chatAvatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+.chatTitle {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Message List */
+.messageList {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 16px;
+  max-height: 450px; /* Constrain height */
+  scrollbar-width: thin; /* Thin scrollbar for Firefox */
+  scrollbar-color: #ccc #f9f9f9;
+}
+
+.messageList::-webkit-scrollbar {
+  width: 8px;
+}
+
+.messageList::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 4px;
+}
+
+.messageList::-webkit-scrollbar-track {
+  background-color: #f9f9f9;
+}
+
+/* Message Styles */
+.messageItem {
+  margin-bottom: 12px;
+  padding: 8px;
+  border-radius: 8px;
+  max-width: 70%;
+}
+
+.messageItem.sent {
+  background-color: #115fe4;
+  margin-left: auto;
+  text-align: right;
+  color: white;
+}
+
+.messageItem.received {
+  background-color: #e7e8ea;
+  text-align: left;
+}
+
+.messageHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.senderName {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.messageContent {
+  font-size: 14px;
+}
+
+.messageTimestamp {
+  font-size: 12px;
+  color: gray;
+}
+
+/* Message Input */
+.messageInput {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border-top: 1px solid #ddd;
+  background-color: #fff;
+  gap: 8px;
+}
+
+.messageInput input {
+  flex-grow: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.messageInput button {
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.messageInput button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.iconButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: #666;
+}
+
+.iconButton:hover {
+  color: #000;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .chatContainer {
+    width: 100%; /* Full width for smaller screens */
+    max-height: 80vh; /* Max height for better usability */
+  }
+
+  .chatHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px;
+  }
+
+  .chatAvatar {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 8px;
+  }
+
+  .chatTitle {
+    font-size: 16px;
+  }
+
+  .messageList {
+    padding: 8px;
+    max-height: calc(100vh - 160px); /* Dynamic height based on header and input */
+  }
+
+  .messageItem {
+    max-width: 85%; /* Adjust message width for small screens */
+    padding: 6px;
+  }
+
+  .messageContent {
+    font-size: 13px;
+  }
+
+  .messageTimestamp {
+    font-size: 11px;
+  }
+
+  .messageInput {
+    flex-direction: column; /* Stack input and buttons */
+    gap: 6px;
+    padding: 8px;
+  }
+
+  .messageInput input {
+    width: 100%; /* Full-width input field */
+    padding: 6px;
+  }
+
+  .messageInput button {
+    width: 100%; /* Full-width buttons */
+    padding: 6px;
+  }
+
+  .iconButton {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .chatContainer {
+    width: 100%; /* Full-screen width for very small devices */
+    height: 100vh; /* Occupy full screen height */
+  }
+
+  .chatHeader {
+    padding: 6px;
+  }
+
+  .chatAvatar {
+    width: 28px;
+    height: 28px;
+  }
+
+  .chatTitle {
+    font-size: 14px;
+  }
+
+  .messageList {
+    padding: 6px;
+  }
+
+  .messageItem {
+    max-width: 90%;
+  }
+
+  .messageContent {
+    font-size: 12px;
+  }
+
+  .messageTimestamp {
+    font-size: 10px;
+  }
+
+  .messageInput {
+    gap: 4px;
+  }
+
+  .messageInput input {
+    padding: 4px;
+  }
+
+  .messageInput button {
+    padding: 4px;
+  }
+
+  .iconButton {
+    font-size: 16px;
+  }
+}

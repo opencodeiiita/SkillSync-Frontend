@@ -1,0 +1,182 @@
+/* Message Input */
+.messageInput {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border-top: 1px solid #ddd;
+  background-color: #fff;
+  gap: 8px;
+  position: relative;
+}
+
+.messageInput input {
+  flex-grow: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.sendButton {
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.sendButton:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.iconButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: #666;
+}
+
+.iconButton:hover {
+  color: #000;
+}
+
+/* Emoji Picker */
+.emojiPicker {
+  position: absolute;
+  bottom: 50px;
+  left: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 12px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.emoji {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.emoji:hover {
+  transform: scale(1.2);
+}
+
+/* File Input */
+.fileInput {
+  display: none;
+}
+
+/* File Preview */
+.filePreview {
+  position: absolute;
+  bottom: 60px;
+  left: 10px;
+  width: 90%;
+  max-width: 300px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.fileDetails {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.fileActions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.uploadButton {
+  padding: 6px 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cancelButton {
+  padding: 6px;
+  background-color: #f44336;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* File Preview */
+.filePreview {
+  position: absolute;
+  bottom: 60px;
+  left: 10px;
+  width: 90%;
+  max-width: 300px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.fileContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9f9f9;
+  border: 1px dashed #ccc;
+  border-radius: 8px;
+  height: 120px;
+  overflow: hidden;
+}
+
+.previewImage {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.filePlaceholder {
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+}
+
+.fileActions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.uploadButton {
+  padding: 6px 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cancelButton {
+  padding: 6px;
+  background-color: #f44336;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+

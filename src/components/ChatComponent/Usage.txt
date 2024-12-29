@@ -1,0 +1,42 @@
+import React from 'react';
+import './App.css';
+import './index.css';
+import { useEffect,useState } from 'react';
+import ChatComponent from "./components/ChatComponent/ChatComponent";
+
+interface Message {
+  sender: string;
+  content: string;
+  timestamp: string;
+  avatar: string;
+}
+
+const App = () => {
+
+  const [messages, setMessages] = useState<Message[]>([
+    {
+      sender: "Alice",
+      content: "Hi there! How are you?",
+      timestamp: "10:00 AM",
+      avatar: "https://st5.depositphotos.com/51587144/63511/v/450/depositphotos_635113146-stock-illustration-profile-image-female-avatar-social.jpg",
+    },
+    {
+      sender: "You",
+      content: "I'm good, thanks! How about you?",
+      timestamp: "10:02 AM",
+      avatar: "https://as1.ftcdn.net/jpg/02/30/60/82/1000_F_230608264_fhoqBuEyiCPwT0h9RtnsuNAId3hWungP.jpg",
+    },
+  ]);
+
+
+  return (
+    <ChatComponent
+      chatTitle="Opencode GC"
+      chatAvatar="https://avatars.githubusercontent.com/u/46129596?s=200&v=4"
+      messages={messages}
+      setMessages={setMessages}
+    />
+  );
+};
+
+export default App;
