@@ -1,0 +1,31 @@
+.workspaceInfo {
+    padding: 20px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+  }
+  
+  .workspaceOverview {
+    margin-bottom: 20px;
+  }
+  
+  .workspaceOverview h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .workspaceOverview p {
+    margin: 5px 0;
+  }
+  
+  .workspaceOverview span {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 4px;
+  }
+  
+  .tabs {
+    display: flex;
+    flex-direction: column;
+  }

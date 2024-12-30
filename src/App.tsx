@@ -30,7 +30,7 @@ const App = () => {
         {/* Main routes defined here */}
         <Routes>
           <Route path="/" element={<Home isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode}/>} />
-          {/* <Route path="/register" element={<Register />} /> */}
+          {/* <Route path="/workspace/:id" element={<WorkspaceDetailsPage/>} /> */}
           {/* <Route path="/profile" element={<Profile />} /> */}
           {/* <Route path="/settings" element={<Settings />} /> */}
         </Routes>
