@@ -1,0 +1,17 @@
+.workspace-details-page {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .workspace-info {
+    flex: 1;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+  }
+  
+  .chat-component {
+    flex: 1;
+    padding: 20px;
+  }

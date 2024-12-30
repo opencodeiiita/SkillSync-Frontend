@@ -30,7 +30,7 @@ const WorkspaceDetailsPage: React.FC = () => {
       { id: '1', title: 'Future Meeting', scheduledDate: '2024-01-02' },
     ],
     onJoinMeeting: () => {},
-    onRemoveParticipant: () => {},
+    onRemoveParticipant: (id: string) => {},
     onLeaveWorkspace: () => {},
   };
 
@@ -45,10 +45,10 @@ const WorkspaceDetailsPage: React.FC = () => {
 
   return (
     <div className="workspace-details-page">
-      <div className="left-section">
+      <div className="workspace-info" style={{ width: '50%', float: 'left' }}>
         <WorkspaceInfo {...workspaceDetails} />
       </div>
-      <div className="right-section">
+      <div className="chat-component" style={{ width: '50%', float: 'right' }}>
         <ChatComponent {...chatDetails} />
       </div>
     </div>
