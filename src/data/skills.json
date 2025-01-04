@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Resume.pdf",
+    "imageSrc": "skills/graphql.png"
+  },
+  {
+    "title": "Readme.md",
+    "imageSrc": "skills/graphql.png"
+  },
+  {
+    "title": "Project Demo Videos",
+    "imageSrc": "skills/graphql.png"
+  },
+  {
+    "title": "API Documentation",
+    "imageSrc": "skills/graphql.png"
+  },
+  {
+    "title": "Design Assets",
+    "imageSrc": "skills/graphql.png"
+  },
+  {
+    "title": "Code Snippets",
+    "imageSrc": "skills/graphql.png"
+  },
+  {
+    "title": "Deployment Logs",
+    "imageSrc": "skills/graphql.png"
+  }
+]

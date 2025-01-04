@@ -1,0 +1,94 @@
+@import "../../vars.css";
+
+.container {
+  position: relative;
+  background-color: rgba(12, 12, 12, 0.6);
+  border-radius: 15px;
+  padding: 73px;
+  margin-top: 129px;
+  z-index: 1;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.title {
+  color: var(--color-text);
+  font-size: 35px;
+  font-weight: 700;
+  letter-spacing: 1.75px;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.activityImage {
+  width: 35%;
+  border-radius: 15px;
+}
+
+.activityItems {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  width: 60%;
+}
+
+.activityItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 20px;
+  padding: 25px;
+  background-color: transparent;  /* Removed gradient background */
+  box-shadow: none;  /* Removed box shadow */
+}
+
+.activityItem img {
+  width: 60px;
+  margin-right: 20px;
+}
+
+.activityItemText h3 {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 5px;
+}
+
+.dataNumber {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--color-text);  /* Removed gradient background from number */
+}
+
+@media screen and (max-width: 830px) {
+  .container {
+    background-color: transparent;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .content {
+    flex-direction: column;
+  }
+
+  .activityImage {
+    display: none;
+  }
+
+  .activityItems {
+    margin-top: 29px;
+  }
+
+  .activityItem {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
