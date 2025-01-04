@@ -1,0 +1,26 @@
+[
+  {
+    "role": "Project Kickoff",
+    "organisation": "Google",
+    "startDate": "Sept, 2022",
+    "endDate": "Present",
+    "experiences": ["Discussed project scope", "Assigned team roles"],
+    "imageSrc": "history/google.png"
+  },
+  {
+    "role": "UI Design Review",
+    "organisation": "Mirosoft",
+    "startDate": "Aug, 2021",
+    "endDate": "Aug, 2022",
+    "experiences": ["Reviewed wireframes", "Confirmed design direction"],
+    "imageSrc": "history/microsoft.png"
+  },
+  {
+    "role": "Sprint Planning",
+    "organisation": "Netflix",
+    "startDate": "Apr, 2020",
+    "endDate": "Jun, 2020",
+    "experiences": ["Discussed sprint goals", "Prioritized tasks for the next sprint"],
+    "imageSrc": "history/netflix.png"
+  }
+]

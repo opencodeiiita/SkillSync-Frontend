@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import './index.css';
 import Home from './pages/Home.tsx';
+import Profile from './pages/Profile.jsx';
 import Workspace from './components/Workspace.tsx';
 
 
@@ -29,6 +30,7 @@ const App = () => {
           <Route path="/" element={<Home isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />} />
     
           <Route path="/workspace" element={<Workspace  />} />
+          <Route path="/profile" element={<Profile  />} />
         </Routes>
       </div>
     </Router>
