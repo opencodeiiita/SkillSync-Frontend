@@ -1,0 +1,61 @@
+.notification-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #f8f8f8;
+  }
+  
+  .notification-list {
+    padding: 1rem;
+  }
+  
+  .notification-card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .notification-card.read {
+    background-color: #f0f0f0;
+  }
+  
+  .notification-card.unread {
+    background-color: #fff;
+  }
+  
+  .actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+  }
+  
+  .search-filter {
+    padding: 1rem;
+    background-color: #f8f8f8;
+  }
+  
+  .pagination {
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .pagination-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .pagination-item {
+    margin: 0 0.5rem;
+  }
+  
+  .pagination-link {
+    text-decoration: none;
+    color: #000;
+  }
+  
+  .pagination-link:hover {
+    text-decoration: underline;
+  }
