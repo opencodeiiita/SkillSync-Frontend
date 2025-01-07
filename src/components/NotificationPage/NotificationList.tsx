@@ -1,10 +1,17 @@
 import React, { useState } from 'react';
-import  NotificationPage from '../../styles/NotificationPage.css'
 import NotificationCard from './NotificationCard';
 import Pagination from './Pagination';
 import SearchFilter from './SearchFilter';
 
-const mockNotifications = [
+interface Notification {
+  id: number;
+  type: string;
+  content: string;
+  timestamp: string;
+  read: boolean;
+}
+
+const mockNotifications: Notification[] = [
   {
     id: 1,
     type: 'Workspace',
@@ -29,7 +36,7 @@ const mockNotifications = [
 ];
 
 const NotificationList: React.FC = () => {
-  const [notifications, setNotifications] = useState(mockNotifications);
+  const [notifications, setNotifications] = useState<Notification[]>(mockNotifications);
   const [currentPage, setCurrentPage] = useState(1);
   const [notificationsPerPage] = useState(10);
   const [searchTerm, setSearchTerm] = useState('');
@@ -45,16 +52,30 @@ const NotificationList: React.FC = () => {
   const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
 
   return (
-    <div className="notification-list">
-      <SearchFilter setSearchTerm={setSearchTerm} />
-      {currentNotifications.map(notification => (
-        <NotificationCard key={notification.id} notification={notification} />
-      ))}
-      <Pagination 
-        notificationsPerPage={notificationsPerPage} 
-        totalNotifications={filteredNotifications.length} 
-        paginate={paginate} 
-      />
+    <div className="bg-gray-100 min-h-screen p-4">
+      <div className="max-w-4xl mx-auto">
+        <SearchFilter setSearchTerm={setSearchTerm} />
+        <div className="space-y-4 mt-6">
+          {currentNotifications.map(notification => (
+            <NotificationCard key={notification.id} notification={notification} />
+          ))}
+        </div>
+        {filteredNotifications.length > notificationsPerPage && (
+          <div className="mt-8">
+            <Pagination 
+              notificationsPerPage={notificationsPerPage} 
+              totalNotifications={filteredNotifications.length} 
+              paginate={paginate} 
+              currentPage={currentPage}
+            />
+          </div>
+        )}
+        {filteredNotifications.length === 0 && (
+          <div className="text-center py-8 text-gray-500">
+            No notifications found.
+          </div>
+        )}
+      </div>
     </div>
   );
 };
