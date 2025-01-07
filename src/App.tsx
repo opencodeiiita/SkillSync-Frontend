@@ -4,8 +4,14 @@ import './App.css';
 import './index.css';
 import Home from './pages/Home.tsx';
 import Workspace from './components/Workspace.tsx';
+
 import WorkspaceDetailsPage from './pages/WorkspaceDetailsPage';
 import NotificationPage from './pages/NotificationPage.tsx';
+
+import WorkspaceDetailsPage from './pages/WorkspacesPage.tsx'
+import WorkspacesPage from './pages/WorkspacesPage.tsx';
+
+
 
 
 const App = () => {
@@ -31,6 +37,8 @@ const App = () => {
           <Route path="/" element={<Home isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />} />
          <Route path='/notification' element={<NotificationPage/>}/>
           <Route path="/workspace" element={<Workspace  />} />
+          <Route path="/workspaces" element={<WorkspacesPage  />} />
+          
           <Route path="/workspace/:id" element={<WorkspaceDetailsPage  />} />
         </Routes>
       </div>
