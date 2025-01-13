@@ -10,6 +10,7 @@ import NotificationPage from "./pages/NotificationPage.tsx";
 
 import UserProfilePage from "./pages/UserProfilePage.tsx";
 import WorkspacesPage from "./pages/WorkspacesPage.tsx";
+import SimulatedWorkspaceChat from "./components/WorkspaceChat.tsx";
 
 const App = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -40,6 +41,7 @@ const App = () => {
           <Route path="/workspaces" element={<WorkspacesPage />} />
           <Route path="/user" element={<UserProfilePage />} />
           <Route path="/workspace/:id" element={<WorkspaceDetailsPage />} />
+          <Route path="/workspace/chat/:id" element={<SimulatedWorkspaceChat/>} />
         </Routes>
       </div>
     </Router>
