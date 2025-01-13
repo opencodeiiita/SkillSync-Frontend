@@ -56,7 +56,6 @@ const App = () => {
 =======
           <Route path="/" element={<Home isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />} />
          <Route path='/notification' element={<NotificationPage/>}/>
-         <Route path="/meeting" element={<ExploreMeetingPage />} />
           <Route path="/workspace" element={<Workspace  />} />
           <Route path="/workspace/:id" element={<WorkspaceDetailsPage  />} />
 >>>>>>> 5cbd3bc (add meeting page)
