@@ -5,7 +5,11 @@
     "allowJs": true,                 // Allows JS files (like JSX) in the project
     "jsx": "react-jsx",              // Enables JSX support with React
     "strict": true,                  // Optional: Enables strict type checking in TypeScript
-    "moduleResolution": "node"       // Resolves modules like in Node.js
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
   },
   "include": [
     "src/**/*"  // Include all files in the 'src' directory
@@ -13,5 +17,5 @@
   "references": [
     { "path": "./tsconfig.app.json" },
     { "path": "./tsconfig.node.json" }
-  ]
+  ],
 }
